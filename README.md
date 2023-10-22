@@ -1,7 +1,7 @@
 # novasummit_contracts
 Source code for novasummit samples every branch is organised in one step of the sample.
 
-steps/01_initial contains base project to demostrate the problem we face.
+steps/02_contract-verifier contains how to configure and run contract verifier in the project.
 
 # ordersProducer
 Microservice for getting orders, it is exposed at:
@@ -9,6 +9,7 @@ Microservice for getting orders, it is exposed at:
 * H2 inmemory database at [http://localhost:8080/h2-console]
 
 there is a data.sql for initilize orders at resources/data.sql
+
 
 # deliveryConsumer
 Microservice for deliver orders, it is exposed at:
