@@ -6,4 +6,5 @@ import lombok.Data;
 public class OrderResponse {
     private int id;
     private String product;
+    private double price;
 }
