@@ -7,8 +7,7 @@ import org.springframework.web.service.annotation.HttpExchange;
 
 
 public interface OrderHttpClient {
-
     @GetExchange("/order/{id}")
-    OrderResponse getOrder(@PathVariable("id") String id);
-
+    OrderResponse getOrder(@PathVariable String id);
 }
+

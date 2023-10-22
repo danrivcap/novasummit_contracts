@@ -13,16 +13,11 @@ import java.util.Set;
 @Service
 @Getter @Setter
 public class ExpressDeliveryService implements DeliveryService{
-
     private static double MAX_PRICE = 15.0d;
-
     @Autowired
     private DeliverableRepository deliverableRepository;
-    
     @Autowired
     private OrderService orderService;
-
-    
     @Override
     public boolean deliver() {
         try{
@@ -32,7 +27,6 @@ public class ExpressDeliveryService implements DeliveryService{
                     .map((o) -> orderService.getOrder(o.intValue()))
                     .map(OrderResponse::getPrice)
                     .reduce(0.0d, Double::sum);
-
             return total <= MAX_PRICE;
         }catch(Exception e){
             System.out.println(e.getMessage());

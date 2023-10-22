@@ -12,15 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @AllArgsConstructor
 public class Order {
-
     @Autowired
-    OrderService orderService;
-
+    private OrderService orderService;
     @GetMapping("/order/{id}")
     @ResponseBody
     public OrderResponse getOrder(@PathVariable String id){
-
         return orderService.getOrderById(Integer.parseInt(id));
-
     }
 }

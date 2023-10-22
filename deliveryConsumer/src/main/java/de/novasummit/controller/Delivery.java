@@ -9,15 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class Delivery {
-
     @Autowired
     private DeliveryService deliveryService;
-
     @GetMapping("/deliver")
     public DeliveryResponse deliver(){
-
         var delivered = deliveryService.deliver();
-
         var response = new DeliveryResponse();
         response.setDelivered(delivered);
         return response;
